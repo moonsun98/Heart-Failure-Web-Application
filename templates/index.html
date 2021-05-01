@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')}}">
+
+
+    <title>Heart Failure Prediction Web Application</title>
+    <title>Heart Failure Prediction</title>
+</head>
+
+<body style="background-color: #fd8781;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #ea676c!important;">
+        <img class="medsymbol" src="static/img/symbol.png" alt="medical symbol">
+        <a class="navbar-brand" href="#"> Heart Failure Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navlist">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">FEATURES</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Disclaimer</h5>
+                </div>
+                <div class="modal-body">
+                    This website is made for educational purposes and is not to be considered as a replacement to a
+                    diagonis by a certified medical professional.
+                    Please use at your own risk.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="text-center">
+            <a href="formdata.html"><button type="button" class="btn btn-primary btn-lg ">Get Your
+                    Prediction</button></a>
+        </div>
+    </div>
+
+
+    <!--Carousal-->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/img/bpic0.jpg" class="d-block w-100" alt="bpic1.jpg" width="1400" height="900">
+            </div>
+            <div class="carousel-item">
+                <img src="static/img/bpic1.jpg" class="d-block w-100" alt="bpic2.jpg" width="1400" height="900">
+            </div>
+            <div class="carousel-item">
+                <img src="static/img/bpic2.jpg" class="d-block w-100" alt="bpic3.jpg" width="1400" height="900">
+            </div>
+        </div>
+    </div>
+
+    <!--Features-->
+    <div class="features" id="features">
+        <div class="row mb-2 my-4">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color:#dcf5f7;">
+                    <div class="col p-4 d-flex flex-column position-static" >
+                        <strong class="d-inline-block mb-2 text-primary">Feature 1</strong>
+                        <h3 class="mb-0">Ejection Fraction</h3>
+                        <p class="card-text mb-auto">Ejection fraction is a measurement, expressed as a percentage,
+                            of how much blood the left ventricle pumps out with each contraction. An ejection fraction
+                            of 60 percent means that 60 percent of the total amount of blood in the left ventricle is
+                            pushed out with each heartbeat.</p>
+                        <a href="https://www.heart.org/en/health-topics/heart-failure/diagnosing-heart-failure/ejection-fraction-heart-failure-measurement#:~:text=Ejection%20fraction%20(EF)%20is%20a,pushed%20out%20with%20each%20heartbeat."
+                            class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="280" height="250" src="static/img/EF3.jpg" alt="ef">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color:#dcf5f7;" >
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Feature 2</strong>
+                        <h3 class="mb-0">Serum Creatinine</h3>
+                        <p class="mb-auto">Serum creatinine is an important indicator of kidney
+                            health because it is an easily measured byproduct of muscle metabolism that is excreted
+                            unchanged by the kidneys. Creatinine itself is produced via a biological system involving
+                            creatine, phosphocreatine, and adenosine triphosphate.</p>
+                        <a href="https://www.medicinenet.com/creatinine_blood_test/article.htm" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="250" height="250" src="static/img/SC.jpg" alt="SC">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#myModal').modal('show');
+        });
+    </script>
+    
+</body>
+
+</html>
+</html>

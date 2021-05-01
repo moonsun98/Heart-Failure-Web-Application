@@ -1,1 +1,2 @@
-# Heart-Failure-Web-Application
+# Heart-Disease-Prediction-Web-Application
+Web Application 
